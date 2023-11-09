@@ -27,14 +27,14 @@ const Jumbotron = () => {
   ];
   return (
     <>
-      <div className=' min-h-screen bg-fixed bg-cover bg-[url("/img/foto2.jpg")] text-white text-3xl flex justify-center items-center'>
+      <div className=" min-h-screen bg-fixed bg-cover bg-transparent text-white text-3xl flex justify-center items-center">
         <div className="grid grid-cols-1 gap-4  w-full lg:grid-cols-2 mt-28 lg:mt-0 ">
           <div className="  min-w-full flex justify-center items-center flex-col gap-5">
             <h1
               style={{ fontSize: "75px" }}
               className=" font-serif shadow-md font-bold"
             >
-              Coflaah
+              Coflaah.
             </h1>
             <p className="p-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil

@@ -15,7 +15,8 @@ const Product = () => {
   ];
   return (
     <>
-      <div className="flex justify-center items-center mt-10 flex-col ">
+      <div className="bg-gradient-to-b from-transparent to-[#eaddcf] p-16"></div>
+      <div className="flex justify-center items-center flex-col bg-[#eaddcf] pb-20">
         <div className="text-black text-3xl font-bold p-10">
           <h1>Product</h1>
         </div>
@@ -46,6 +47,7 @@ const Product = () => {
           ))}
         </div>
       </div>
+      <div className="bg-gradient-to-t from-transparent to-[#eaddcf] p-16"></div>
     </>
   );
 };
