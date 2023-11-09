@@ -1,7 +1,19 @@
-const Navbar = () => {
+const Navbar = (props) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
-      <div className="navbar bg-[#241401]">
+      <div
+        className={`navbar  ${
+          props.isVisible
+            ? "bg-yellow-800 animate__animated animate__backInDown"
+            : " bg-transparent "
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle text-white">
@@ -37,9 +49,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-3xl text-white">
-            Coflaah
-          </a>
+          <button
+            className="btn btn-ghost normal-case text-3xl text-white"
+            onClick={scrollToTop}
+          >
+            <img src="/img/logo.png" alt="" style={{ width: "15%" }} />
+          </button>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle text-white">
