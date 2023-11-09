@@ -4,14 +4,38 @@ const Product = () => {
   const items = [
     {
       kopi: 1,
+      soldOut: false,
+      promo: false,
+      bestSeller: true,
       image: "./img/foto3.jpg",
       nama: "kopi 1",
       deskripsi: "as as dkj askj ",
     },
     {
       kopi: 2,
+      soldOut: false,
+      promo: true,
+      bestSeller: true,
       image: "./img/foto4.jpg",
       nama: "kopi 2",
+      deskripsi: "as as dkj askj ",
+    },
+    {
+      kopi: 3,
+      soldOut: false,
+      promo: true,
+      bestSeller: false,
+      image: "./img/foto4.jpg",
+      nama: "kopi 3",
+      deskripsi: "as as dkj askj ",
+    },
+    {
+      kopi: 4,
+      soldOut: true,
+      promo: false,
+      bestSeller: false,
+      image: "./img/foto3.jpg",
+      nama: "kopi 4",
       deskripsi: "as as dkj askj ",
     },
   ];
@@ -60,19 +84,46 @@ const Product = () => {
         >
           {items.map((items, index) => (
             <div key={index} className="animated-item">
-              <div
-                className={`card w-96 h-96 bg-[#2d1b08] shadow-xl text-white `}
-              >
-                <figure>
-                  <img src={items.image} alt="Shoes" className="bg-contain" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">{items.nama}</h2>
-                  <p>{items.deskripsi}</p>
-                  <div className="card-actions justify-end">
-                    <button className="btn bg-[#603e21] text-white">
-                      Buy Now
-                    </button>
+              <div className="relative ...">
+                <div
+                  className={`card  h-96 bg-[#2d1b08] shadow-xl text-white m-3 `}
+                >
+                  <figure>
+                    <img src={items.image} alt="Shoes" className="bg-contain" />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{items.nama}</h2>
+                    <p>{items.deskripsi}</p>
+                    <div className="card-actions justify-end">
+                      {!items.soldOut && (
+                        <button className="btn bg-[#603e21] text-white">
+                          Buy Now
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -top-4 right-2 ...">
+                  <div className="flex gap-2">
+                    {items.soldOut && (
+                      <div>
+                        <img src="./img/soldOut.png" className="w-20" alt="" />
+                      </div>
+                    )}
+                    {items.promo && (
+                      <div>
+                        <img src="./img/discount.png" className="w-20" alt="" />
+                      </div>
+                    )}
+                    {items.bestSeller && (
+                      <div>
+                        <img
+                          src="./img/best-seller.png"
+                          className="w-20"
+                          alt=""
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
