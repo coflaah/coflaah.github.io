@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 const Product = () => {
   const items = [
     {
@@ -13,6 +15,38 @@ const Product = () => {
       deskripsi: "as as dkj askj ",
     },
   ];
+
+  const animatedRef = useRef(null);
+
+  useEffect(() => {
+    const animatedElement = animatedRef.current;
+
+    const handleScroll = () => {
+      const elementTop = animatedElement.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (elementTop < windowHeight) {
+        animatedElement.classList.add("animate__animated", "animate__bounceIn");
+      } else {
+        animatedElement.classList.remove(
+          "animate__animated",
+          "animate__bounceIn"
+        );
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Hapus kelas animasi saat komponen dibongkar
+    return () => {
+      animatedElement.classList.remove(
+        "animate__animated",
+        "animate__bounceIn"
+      );
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-gradient-to-b from-transparent to-[#eaddcf] p-16"></div>
@@ -20,15 +54,14 @@ const Product = () => {
         <div className="text-black text-3xl font-bold p-10">
           <h1>Product</h1>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10  ">
+        <div
+          className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10  "
+          ref={animatedRef}
+        >
           {items.map((items, index) => (
-            <div key={index}>
+            <div key={index} className="animated-item">
               <div
-                className={`card w-96 h-96 bg-[#2d1b08] shadow-xl text-white animate__animated ${
-                  items.kopi % 2 === 0
-                    ? "animate__backInLeft"
-                    : "animate__backInRight"
-                }`}
+                className={`card w-96 h-96 bg-[#2d1b08] shadow-xl text-white `}
               >
                 <figure>
                   <img src={items.image} alt="Shoes" className="bg-contain" />
