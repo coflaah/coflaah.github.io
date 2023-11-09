@@ -29,7 +29,10 @@ function App() {
 
   return (
     <>
-      <div className="bg-[url('./img/foto1.jpg')] bg-cover bg-fixed">
+      <div
+        style={{ backgroundImage: 'url("./img/foto1.jpg")' }}
+        className=" bg-cover bg-fixed"
+      >
         <Navbar isVisible={isVisible} />
         <Jumbotron />
         <Product />
