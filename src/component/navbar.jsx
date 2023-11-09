@@ -1,18 +1,36 @@
+import { useEffect, useState } from "react";
+
 const Navbar = (props) => {
+  const [logo, setLogo] = useState(false);
+  const [logo1, setLogo1] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    if (props.isVisible) {
+      setTimeout(() => {
+        setLogo1(false);
+      }, 500);
+      setLogo(true);
+    } else {
+      setTimeout(() => {
+        setLogo(false);
+      }, 500);
+      setLogo1(true);
+    }
+  }, [props.isVisible]);
   return (
     <>
       <div
         className={`navbar  ${
           props.isVisible
-            ? "bg-yellow-800 animate__animated animate__backInDown"
+            ? "bg-yellow-800 animate__animated animate__fadeInDown"
             : " bg-transparent "
         }`}
+        style={{ transitionDuration: "1.5s" }}
       >
         <div className="navbar-start">
           <div className="dropdown">
@@ -50,10 +68,21 @@ const Navbar = (props) => {
         </div>
         <div className="navbar-center">
           <button
-            className="btn btn-ghost normal-case text-3xl text-white"
+            className="btn btn-ghost  text-3xl text-white "
             onClick={scrollToTop}
           >
-            <img src="/img/logo.png" alt="" style={{ width: "15%" }} />
+            <img
+              src="/img/logo.png"
+              alt=""
+              style={{ width: "15%" }}
+              className={`animate__animated ${
+                logo && !logo1
+                  ? "animate__rotateIn"
+                  : !logo && logo1
+                  ? "animate__rotateIn"
+                  : "animate__rotateOut"
+              }`}
+            />
           </button>
         </div>
         <div className="navbar-end">
