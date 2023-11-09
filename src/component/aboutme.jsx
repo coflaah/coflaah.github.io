@@ -17,11 +17,13 @@ const About = () => {
                   : about && "animate__fadeInLeft"
               }`}
             >
-              {hilang && (
-                <div className=" transform -rotate-90">
-                  <img src="./img/y8.gif" alt="" />
-                </div>
-              )}
+              <div className=" hidden  md:flex lg:flex  items-center">
+                {hilang && (
+                  <div className=" transform -rotate-90">
+                    <img src="./img/y8.gif" alt="" />
+                  </div>
+                )}
+              </div>
               <div
                 className={`bg-white p-5 text-black w-3/4 lg:w-1/2 md:w-1/2 rounded-3xl shadow-xl  `}
               >
