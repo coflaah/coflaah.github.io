@@ -33,30 +33,6 @@ const Footer = () => {
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
-                    <a
-                      href="https://www.kaggle.com/ardifajararifin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-yellow-950 hover:bg-[#c6781f]  "
-                    >
-                      <i className="fab fa-whatsapp"></i>
-                    </a>
-                    <a
-                      href="https://github.com/ardifjar443"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-yellow-950 hover:bg-[#c6781f]  "
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                    <a
-                      href="https://www.linkedin.com/in/ardi-fajar-arifin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-yellow-950 hover:bg-[#c6781f]  "
-                    >
-                      <i className="fab fa-linkedin"></i>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -68,7 +44,7 @@ const Footer = () => {
           <p>
             Create with <i className="bi bi-heart-fill"></i> by{" "}
             <a
-              href="https://www.instagram.com/ardi_fj_ar/"
+              href="https://www.instagram.com/coflaah_/"
               className=" hover:bg-gray-500 rounded-full py-2 px-1 fw-bold "
               style={{ textDecoration: "none" }}
             >
