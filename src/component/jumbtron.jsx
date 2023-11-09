@@ -14,7 +14,7 @@ const Jumbotron = () => {
       kopi: 1,
       image: "./img/foto3.jpg",
       nama: "kopi 1",
-      harga: 23000,
+      harga: 23,
       deskripsi:
         "as as dkj askj zxcv.,mn asdlf;kj zcx,./mv asdfklj zxc./,vm asdkfj zcx.,/vm  ",
     },
@@ -22,7 +22,7 @@ const Jumbotron = () => {
       kopi: 2,
       image: "./img/foto4.jpg",
       nama: "kopi 2",
-      harga: 25000,
+      harga: 25,
       deskripsi:
         "as as dkj askj zxcv.,mn asdlf;kj zcx,./mv asdfklj zxc./,vm asdkfj zcx.,/vm ",
     },
@@ -70,9 +70,9 @@ const Jumbotron = () => {
                           <div className=" flex items-center">
                             <h1 className="text-3xl font-bold">{items.nama}</h1>
                           </div>
-                          <div className="flex justify-center items-center">
+                          <div className="flex justify-end items-center ">
                             <div className="bg-yellow-800 p-2 rounded-lg text-white shadow-lg">
-                              {formatRupiah(items.harga)}
+                              {items.harga}K
                             </div>
                           </div>
                         </div>
