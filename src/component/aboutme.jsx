@@ -51,18 +51,6 @@ const About = () => {
                   : !about && "animate__fadeInLeft"
               }`}
             >
-              <button
-                className="text-white text-3xl p-3"
-                onClick={() => {
-                  setHilang(true);
-                  setTimeout(() => {
-                    setHilang(false);
-                    setAbout(true);
-                  }, 500);
-                }}
-              >
-                <i className="bi bi-arrow-bar-left"></i>About us
-              </button>
               <div className="bg-white p-5 text-black w-3/4  rounded-3xl shadow-xl">
                 <h1 className="text-3xl font-bold mb-5">Available in</h1>
                 <div className="flex flex-col m-10 gap-4">
@@ -74,6 +62,18 @@ const About = () => {
                   </button>
                 </div>
               </div>
+              <button
+                className="text-white text-3xl p-3"
+                onClick={() => {
+                  setHilang(true);
+                  setTimeout(() => {
+                    setHilang(false);
+                    setAbout(true);
+                  }, 500);
+                }}
+              >
+                About us<i className="bi bi-arrow-bar-right"></i>
+              </button>
             </div>
           </>
         )}

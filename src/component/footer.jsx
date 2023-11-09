@@ -39,7 +39,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="bg-yellow-950 hover:bg-[#c6781f]  "
                     >
-                      <i className="fab fa-kaggle"></i>
+                      <i className="fab fa-whatsapp"></i>
                     </a>
                     <a
                       href="https://github.com/ardifjar443"
