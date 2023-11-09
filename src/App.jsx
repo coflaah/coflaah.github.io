@@ -6,6 +6,7 @@ import Navbar from "./component/navbar";
 import Product from "./component/product";
 import Footer from "./component/footer";
 import Jumbotron from "./component/jumbtron";
+import About from "./component/aboutme";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,10 +29,11 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#eaddcf]">
+      <div className="bg-[url('./img/foto1.jpg')] bg-cover bg-fixed">
         <Navbar isVisible={isVisible} />
         <Jumbotron />
         <Product />
+        <About />
         <Footer />
       </div>
     </>
