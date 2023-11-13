@@ -48,6 +48,13 @@ const About = () => {
                 Available in <i className="bi bi-arrow-bar-right"></i>
               </button>
             </div>
+            {/* <div className=" hidden  md:flex lg:flex  items-center  w-96 justify-end ">
+              {hilang && (
+                <div className=" transform -rotate-90">
+                  <img src="./img/portal.gif" className=" w-48" alt="" />
+                </div>
+              )}
+            </div> */}
           </>
         ) : (
           <>
