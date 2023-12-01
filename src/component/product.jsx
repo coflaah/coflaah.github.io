@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const Product = () => {
+const Product = (props) => {
   const items = [
     {
       kopi: 1,
@@ -8,7 +8,7 @@ const Product = () => {
       promo: false,
       bestSeller: false,
       new: true,
-      image: "./img/foto3.jpg",
+      image: "./img/kopi1.png",
       nama: "Signature Fix",
       deskripsi: "kopi susu gula aren ",
       harga: 28,
@@ -25,12 +25,12 @@ const Product = () => {
         <div className="text-black text-3xl font-bold p-10">
           <h1>Product</h1>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-10  ">
+        <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-10  lg:w-1/2 md:w-1/2  ">
           {items.map((items, index) => (
             <div key={index} className="animated-item">
               <div className="relative ...">
                 <div
-                  className={`card  h-96 bg-[#2d1b08] shadow-xl text-white m-3 `}
+                  className={`card  h-96 bg-[#2d1b08] shadow-xl text-white m-3  `}
                 >
                   <figure>
                     <img src={items.image} alt="Shoes" className="bg-contain" />
@@ -38,9 +38,10 @@ const Product = () => {
                   <div className="card-body">
                     <div className="grid grid-cols-2">
                       <div>
-                        <div className="flex items-end gap-2">
-                          <h2 className="card-title text-3xl ">{items.nama}</h2>
-                          <p className="text-xl">{items.ukuran}</p>
+                        <div className="">
+                          <h2 className="card-title text-2xl lg:text-3xl md:text-3xl ">
+                            {items.nama + " (" + items.ukuran + ")"}
+                          </h2>
                         </div>
                         <p>{items.deskripsi}</p>
                       </div>
@@ -52,8 +53,11 @@ const Product = () => {
                     </div>
                     <div className="card-actions justify-end">
                       {!items.soldOut && (
-                        <button className="btn bg-[#603e21] text-white">
-                          Buy Now
+                        <button
+                          className="btn bg-[#603e21] text-white"
+                          onClick={props.order}
+                        >
+                          Order Now
                         </button>
                       )}
                     </div>

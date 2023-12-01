@@ -24,15 +24,27 @@ const Footer = () => {
               <div className="col-md mb-3">
                 <div className="footer-col text-white">
                   <h4>follow us</h4>
-                  <div className="social-links text-white">
-                    <a
-                      href="https://www.instagram.com/coflaah_/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-yellow-950 hover:bg-[#c6781f]  "
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
+                  <div className="flex">
+                    <div className="social-links text-white">
+                      <a
+                        href="https://www.instagram.com/coflaah_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-yellow-950 hover:bg-[#c6781f]  "
+                      >
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                    </div>
+                    <div className="social-links text-white">
+                      <a
+                        href="https://api.whatsapp.com/send?phone=623120685622"
+                        target="__blank"
+                        rel="noopener noreferrer"
+                        className="bg-yellow-950 hover:bg-[#c6781f]  "
+                      >
+                        <i className="fab fa-whatsapp"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -44,9 +56,10 @@ const Footer = () => {
           <p>
             Create with <i className="bi bi-heart-fill"></i> by{" "}
             <a
-              href="https://www.instagram.com/coflaah_/"
+              href="https://www.instagram.com/ardi_fj_ar/"
               className=" hover:bg-gray-500 rounded-full py-2 px-1 fw-bold "
               style={{ textDecoration: "none" }}
+              target="__blank"
             >
               Ardi Fajar Arifin
             </a>

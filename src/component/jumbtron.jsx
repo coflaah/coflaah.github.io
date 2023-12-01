@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Jumbotron = () => {
+const Jumbotron = (props) => {
   const settings = {
     dots: true,
     autoplay: true,
@@ -54,10 +54,10 @@ const Jumbotron = () => {
                         backgroundImage: `url(${items.image})`,
                         backgroundSize: "cover",
                       }}
-                      className="h-[35rem] p-5 rounded-3xl flex items-start lg:items-end md:items-end "
+                      className="h-[35rem] p-2 rounded-3xl flex items-start "
                     >
-                      <div className="bg-white text-black p-3 rounded-2xl shadow-2xl w-3/4 lg:w-1/2 md:1/2 h-1/2">
-                        <div className="grid grid-cols-2 m-4">
+                      <div className="bg-white text-black p-3 rounded-2xl shadow-2xl w-3/4 lg:w-1/2 md:1/2 ">
+                        <div className="grid grid-cols-2 m-4  ">
                           <div className=" flex items-center">
                             <h1 className="text-2xl font-bold">{items.nama}</h1>
                           </div>
@@ -69,7 +69,10 @@ const Jumbotron = () => {
                         </div>
                         <p className="text-lg  p-5">{items.deskripsi}</p>
                         <div className=" flex justify-end  h-full ">
-                          <button className="bg-yellow-800 hover:bg-yellow-900 text-white p-2 rounded-2xl shadow-lg h-16">
+                          <button
+                            className="bg-yellow-800 hover:bg-yellow-900 text-white p-2 rounded-2xl shadow-lg h-16"
+                            onClick={props.order}
+                          >
                             Order Now
                           </button>
                         </div>
