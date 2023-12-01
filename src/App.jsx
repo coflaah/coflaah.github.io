@@ -27,6 +27,25 @@ function App() {
     };
   }, []);
 
+  const [about, setAbout] = useState(true);
+  const [hilang, setHilang] = useState(false);
+
+  const order = () => {
+    // Mengarahkan ke elemen dengan id "contoh"
+    const contohElement = document.getElementById("order");
+
+    if (contohElement) {
+      contohElement.scrollIntoView({ behavior: "smooth" });
+    }
+    if (about == true) {
+      setHilang(true);
+      setTimeout(() => {
+        setHilang(false);
+        setAbout(false);
+      }, 500);
+    }
+  };
+
   return (
     <>
       <div
@@ -34,9 +53,14 @@ function App() {
         className=" bg-cover bg-fixed"
       >
         <Navbar isVisible={isVisible} />
-        <Jumbotron />
-        <Product />
-        <About />
+        <Jumbotron order={order} />
+        <Product order={order} />
+        <About
+          about={about}
+          setAbout={setAbout}
+          hilang={hilang}
+          setHilang={setHilang}
+        />
         <Footer />
       </div>
     </>

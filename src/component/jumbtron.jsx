@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Jumbotron = () => {
+const Jumbotron = (props) => {
   const settings = {
     dots: true,
     autoplay: true,
@@ -12,19 +12,10 @@ const Jumbotron = () => {
   const Rekomendasi = [
     {
       kopi: 1,
-      image: "./img/foto3.jpg",
-      nama: "kopi 1",
-      harga: 23,
-      deskripsi:
-        "as as dkj askj zxcv.,mn asdlf;kj zcx,./mv asdfklj zxc./,vm asdkfj zcx.,/vm  ",
-    },
-    {
-      kopi: 2,
-      image: "./img/foto4.jpg",
-      nama: "kopi 2",
-      harga: 25,
-      deskripsi:
-        "as as dkj askj zxcv.,mn asdlf;kj zcx,./mv asdfklj zxc./,vm asdkfj zcx.,/vm ",
+      image: "./img/kopi1.png",
+      nama: "Signature Fix",
+      harga: 28,
+      deskripsi: "kopi susu gula aren  ",
     },
   ];
   const formatRupiah = (angka) => {
@@ -63,22 +54,25 @@ const Jumbotron = () => {
                         backgroundImage: `url(${items.image})`,
                         backgroundSize: "cover",
                       }}
-                      className="h-[35rem] p-5 rounded-3xl flex items-end"
+                      className="h-[35rem] p-2 rounded-3xl flex items-start "
                     >
-                      <div className="bg-white text-black p-3 rounded-2xl shadow-2xl">
-                        <div className="grid grid-cols-2 m-4">
+                      <div className="bg-white text-black p-3 rounded-2xl shadow-2xl w-3/4 lg:w-1/2 md:1/2 ">
+                        <div className="grid grid-cols-2 m-4  ">
                           <div className=" flex items-center">
-                            <h1 className="text-3xl font-bold">{items.nama}</h1>
+                            <h1 className="text-2xl font-bold">{items.nama}</h1>
                           </div>
                           <div className="flex justify-end items-center ">
-                            <div className="bg-yellow-800 p-2 rounded-lg text-white shadow-lg">
+                            <div className="bg-yellow-800 p-2 rounded-lg text-white shadow-lg text-lg lg:text-2xl md:text-2xl">
                               {items.harga}K
                             </div>
                           </div>
                         </div>
-                        <p className="text-lg">{items.deskripsi}</p>
-                        <div className=" flex justify-end">
-                          <button className="bg-yellow-800 hover:bg-yellow-900 text-white p-2 rounded-2xl shadow-lg">
+                        <p className="text-lg  p-5">{items.deskripsi}</p>
+                        <div className=" flex justify-end  h-full ">
+                          <button
+                            className="bg-yellow-800 hover:bg-yellow-900 text-white p-2 rounded-2xl shadow-lg h-16"
+                            onClick={props.order}
+                          >
                             Order Now
                           </button>
                         </div>
