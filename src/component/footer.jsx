@@ -26,7 +26,7 @@ const Footer = () => {
                   <h4>follow us</h4>
                   <div className="social-links text-white">
                     <a
-                      href="https://www.instagram.com/ardi_fj_ar/"
+                      href="https://www.instagram.com/coflaah_/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-yellow-950 hover:bg-[#c6781f]  "

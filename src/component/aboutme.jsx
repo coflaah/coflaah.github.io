@@ -27,7 +27,7 @@ const About = () => {
               <div
                 className={`bg-white p-5 text-black w-3/4 lg:w-1/2 md:w-1/2 rounded-3xl shadow-xl  `}
               >
-                <h1 className="text-3xl font-bold mb-5">About Me</h1>
+                <h1 className="text-3xl font-bold mb-5">About Us</h1>
                 <p className="p-1 lg:p-10 md:p-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                   asperiores, laudantium cumque debitis aspernatur, aperiam
@@ -45,7 +45,7 @@ const About = () => {
                   }, 500);
                 }}
               >
-                Available in <i className="bi bi-arrow-bar-right"></i>
+                Order here <i className="bi bi-arrow-bar-right"></i>
               </button>
             </div>
             {/* <div className=" hidden  md:flex lg:flex  items-center  w-96 justify-end ">
@@ -66,13 +66,13 @@ const About = () => {
               }`}
             >
               <div className="bg-white p-5 text-black w-3/4  rounded-3xl shadow-xl">
-                <h1 className="text-3xl font-bold mb-5">Available in</h1>
+                <h1 className="text-3xl font-bold mb-5">Order Here :</h1>
                 <div className="flex flex-col m-10 gap-4">
                   <button className="bg-green-400 hover:bg-green-500 p-4 text-center text-white text-3xl font-bold rounded-2xl shadow-lg">
-                    TokoPedia
+                    WhatsApp
                   </button>
-                  <button className="bg-amber-500 hover:bg-amber-600 p-4 text-center text-white text-3xl font-bold rounded-2xl shadow-lg">
-                    Shopee
+                  <button className="bg-gradient-to-r from-[#c92bb7] to-blue-500 hover:bg-amber-600 p-4 text-center text-white text-3xl font-bold rounded-2xl shadow-lg">
+                    Instagram
                   </button>
                 </div>
               </div>
