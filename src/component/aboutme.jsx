@@ -73,7 +73,7 @@ const About = (props) => {
                   <div className="flex flex-col m-10 gap-4">
                     <a
                       className="bg-green-400 hover:bg-green-500 p-4 text-center text-white text-3xl font-bold rounded-2xl shadow-lg"
-                      href="https://api.whatsapp.com/send?phone=623120685622"
+                      href="https://api.whatsapp.com/send?phone=6283120685622"
                       target="__blank"
                     >
                       WhatsApp
