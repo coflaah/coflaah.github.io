@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                     <div className="social-links text-white">
                       <a
-                        href="https://api.whatsapp.com/send?phone=623120685622"
+                        href="https://api.whatsapp.com/send?phone=6283120685622"
                         target="__blank"
                         rel="noopener noreferrer"
                         className="bg-yellow-950 hover:bg-[#c6781f]  "
