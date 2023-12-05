@@ -52,16 +52,35 @@ const Navbar = (props) => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 text-black"
             >
               <li>
-                <a>Homepage</a>
+                <button
+                  className="hover:text-yellow-800"
+                  onClick={() => {
+                    props.view2("home");
+                  }}
+                >
+                  Homepage
+                </button>
               </li>
               <li>
-                <a>Portfolio</a>
+                <button
+                  className="hover:text-yellow-800"
+                  onClick={() => {
+                    props.view2("product");
+                  }}
+                >
+                  Product
+                </button>
               </li>
               <li>
-                <a>About</a>
+                <button
+                  className="hover:text-yellow-800"
+                  onClick={props.toAbout}
+                >
+                  About
+                </button>
               </li>
             </ul>
           </div>
@@ -85,8 +104,62 @@ const Navbar = (props) => {
             />
           </button>
         </div>
+
         <div className="navbar-end  ">
-          <button className="btn btn-ghost btn-circle text-white">
+          <div className="dropdown ">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost btn-circle text-white "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content  z-[1]  shadow bg-white rounded-box w-fit right-1 text-black "
+            >
+              <li>
+                <div className="card w-96  shadow-x bg-white hover:text-yellow-800 active:bg-yellow-600">
+                  <figure>
+                    <img
+                      src="./img/kopi1.png"
+                      alt="Shoes "
+                      className=" w-28 h-28 object-cover"
+                    />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title hover:text-yellow-800">
+                      Produk baru
+                    </h2>
+                    <p>Signature Fix</p>
+                    <div className="card-actions justify-end ">
+                      <button
+                        className="btn bg-yellow-800 hover:bg-yellow-900 border-none text-white"
+                        onClick={() => {
+                          props.view("kopi1");
+                        }}
+                      >
+                        View
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          {/* <button className="btn btn-ghost btn-circle text-white">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +177,7 @@ const Navbar = (props) => {
               </svg>
               <span className="badge badge-xs bg-yellow-200 indicator-item"></span>
             </div>
-          </button>
+          </button> */}
         </div>
       </div>
     </>

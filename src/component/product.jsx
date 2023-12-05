@@ -20,14 +20,17 @@ const Product = (props) => {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-transparent to-[#eaddcf] p-16"></div>
+      <div
+        className="bg-gradient-to-b from-transparent to-[#eaddcf] p-16"
+        id="product"
+      ></div>
       <div className="flex justify-center items-center flex-col bg-[#eaddcf] pb-20">
         <div className="text-black text-3xl font-bold p-10">
           <h1>Product</h1>
         </div>
         <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-10  lg:w-1/2 md:w-1/2  ">
           {items.map((items, index) => (
-            <div key={index} className="animated-item">
+            <div key={index} className="animated-item" id={"kopi" + items.kopi}>
               <div className="relative ...">
                 <div
                   className={`card  h-96 bg-[#2d1b08] shadow-xl text-white m-3  `}
