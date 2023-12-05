@@ -31,10 +31,9 @@ const About = (props) => {
               >
                 <h1 className="text-3xl font-bold mb-5">About Us</h1>
                 <p className="p-1 lg:p-10 md:p-10">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                  asperiores, laudantium cumque debitis aspernatur, aperiam
-                  voluptas modi earum quia id consequatur eveniet tempore
-                  sapiente nesciunt enim eum voluptatem exercitationem sunt.
+                  Kami sedang mengembangkan kopi yang memiliki rasa yang unik
+                  dan tak terlupakan. Kopi ini akan dibuat dengan bahan-bahan
+                  berkualitas tinggi, dan diproses dengan cara yang inovatif.
                 </p>
               </div>
               <button
