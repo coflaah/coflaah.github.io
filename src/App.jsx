@@ -45,6 +45,38 @@ function App() {
       }, 500);
     }
   };
+  const toAbout = () => {
+    // Mengarahkan ke elemen dengan id "contoh"
+    const contohElement = document.getElementById("order");
+
+    if (contohElement) {
+      contohElement.scrollIntoView({ behavior: "smooth" });
+    }
+    if (about == false) {
+      setHilang(true);
+      setTimeout(() => {
+        setHilang(false);
+        setAbout(true);
+      }, 500);
+    }
+  };
+  const view = (kopi) => {
+    // Mengarahkan ke elemen dengan id "contoh"
+    const contohElement = document.getElementById(kopi);
+
+    if (contohElement) {
+      contohElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  const view2 = (ke) => {
+    // Mengarahkan ke elemen dengan id "contoh"
+    const contohElement = document.getElementById(ke);
+
+    if (contohElement) {
+      contohElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -52,7 +84,12 @@ function App() {
         style={{ backgroundImage: 'url("./img/foto1.jpg")' }}
         className=" bg-cover bg-fixed"
       >
-        <Navbar isVisible={isVisible} />
+        <Navbar
+          isVisible={isVisible}
+          view={view}
+          toAbout={toAbout}
+          view2={view2}
+        />
         <Jumbotron order={order} />
         <Product order={order} />
         <About
